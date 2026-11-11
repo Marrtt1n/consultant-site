@@ -35,7 +35,10 @@
   <!-- HERO -->
   <section id="top" class="hero">
     <div class="hero__noise" aria-hidden="true"></div>
-    <div class="hero__glow" aria-hidden="true"></div>
+    <div class="hero__grid" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--1" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--2" aria-hidden="true"></div>
+    <div class="hero__blob hero__blob--3" aria-hidden="true"></div>
     <svg class="hero__line hero__line--mobile" viewBox="0 0 375 700" preserveAspectRatio="none" aria-hidden="true">
       <path d="M 40 60 C 120 160, 40 280, 130 400 C 200 480, 90 560, 160 650" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.4"/>
     </svg>
@@ -188,7 +191,7 @@
 
       <div class="steps steps--desktop reveal">
         <svg class="steps__line" viewBox="0 0 1040 4" preserveAspectRatio="none" aria-hidden="true">
-          <line x1="24" y1="2" x2="1016" y2="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <line class="draw-line" x1="24" y1="2" x2="1016" y2="2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
         </svg>
         <div class="steps__grid">
           <div class="step"><div class="step__num">01</div><h3>Пишете</h3><p>в Telegram, без анкет и звонков</p></div>
@@ -201,7 +204,7 @@
 
       <div class="steps steps--mobile">
         <svg class="steps__line-v" viewBox="0 0 4 560" preserveAspectRatio="none" aria-hidden="true">
-          <line x1="2" y1="24" x2="2" y2="536" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          <line class="draw-line" x1="2" y1="24" x2="2" y2="536" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" opacity="0.5" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1"/>
         </svg>
         <div class="steps__col">
           <div class="step step--row"><div class="step__num">01</div><div class="step__body"><h3>Пишете</h3><p>в Telegram, без анкет и звонков</p></div></div>
@@ -229,7 +232,7 @@
         <li class="trust-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg><span>Сопровождение до результата</span></li>
         <li class="trust-item reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span>Помощь на каждом этапе</span></li>
       </ul>
-      <blockquote class="quote reveal">Я не оставляю человека одного в процессе — сопровождаю до конца.</blockquote>
+      <blockquote class="quote reveal" data-typewriter>Я не оставляю человека одного в процессе — сопровождаю до конца.</blockquote>
     </div>
   </section>
 
