@@ -51,7 +51,7 @@ document.querySelectorAll('.faq__item').forEach((item) => {
 });
 
 // Count-up for reward values
-const fmt = (n) => n.toLocaleString('ru-RU').replace(/\u00A0/g, ' ');
+const fmt = (n) => String(n);
 function animateCount(el) {
   const text = el.textContent.trim();
   const nums = text.match(/\d[\d ]*?\d|\d/g);
