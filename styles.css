@@ -164,12 +164,47 @@ body {
   50%  { transform: translate(-50px, -60px) scale(1.15); }
   100% { transform: translate(60px, 30px) scale(0.92); }
 }
-.hero__line { position: absolute; inset: 0; height: 100%; width: 100%; color: var(--blue); pointer-events: none; }
-.hero__line--mobile { display: block; }
-.hero__line--desktop { display: none; }
-@media (min-width: 768px) {
-  .hero__line--mobile { display: none; }
-  .hero__line--desktop { display: block; }
+.hero__orbit {
+  position: absolute; color: var(--blue); pointer-events: none;
+}
+.hero__orbit--1 {
+  width: 620px; height: 620px;
+  right: -14%; top: -18%;
+  opacity: 0.35;
+}
+.hero__orbit--2 {
+  width: 380px; height: 380px;
+  left: -12%; bottom: -16%;
+  opacity: 0.22;
+}
+@media (max-width: 767px) {
+  .hero__orbit--1 { width: 380px; height: 380px; right: -30%; top: -10%; }
+  .hero__orbit--2 { display: none; }
+}
+.orbit-dots {
+  stroke-dasharray: 1 16;
+  animation: orbit-march 24s linear infinite;
+}
+.orbit-dots--rev { animation-direction: reverse; animation-duration: 32s; }
+@keyframes orbit-march {
+  to { stroke-dashoffset: -340; }
+}
+.hero__spark {
+  position: absolute; width: 14px; height: 14px;
+  pointer-events: none; opacity: 0.5;
+}
+.hero__spark::before, .hero__spark::after {
+  content: ""; position: absolute; background: var(--blue); border-radius: 2px;
+}
+.hero__spark::before { left: 6px; top: 0; width: 2px; height: 14px; }
+.hero__spark::after  { left: 0; top: 6px; width: 14px; height: 2px; }
+.hero__spark--1 { top: 22%; left: 46%; animation: spark-twinkle 3.2s ease-in-out infinite; }
+.hero__spark--2 { top: 62%; right: 12%; width: 10px; height: 10px; animation: spark-twinkle 4s ease-in-out 0.8s infinite; }
+.hero__spark--3 { top: 14%; right: 30%; width: 10px; height: 10px; animation: spark-twinkle 3.6s ease-in-out 1.6s infinite; }
+@media (max-width: 767px) { .hero__spark--3 { display: none; } }
+@keyframes spark-twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.7); }
+  50%      { opacity: 0.6;  transform: scale(1); }
 }
 .hero__inner {
   position: relative; width: 100%;
