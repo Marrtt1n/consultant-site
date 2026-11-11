@@ -110,6 +110,28 @@ if (quote) {
   quoteIO.observe(quote);
 }
 
+// Hero TG card tilt + chips parallax
+const heroVisual = document.getElementById('heroVisual');
+const tgCard = document.getElementById('tgCard');
+if (heroVisual && tgCard && matchMedia('(pointer: fine)').matches) {
+  heroVisual.addEventListener('mousemove', (e) => {
+    const r = heroVisual.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    tgCard.style.transform = `rotateY(${x * 10}deg) rotateX(${-y * 8}deg)`;
+    heroVisual.querySelectorAll('.float-chip').forEach((chip, i) => {
+      const depth = i === 0 ? 18 : -22;
+      chip.style.translate = `${x * depth}px ${y * depth * 0.6}px`;
+    });
+  });
+  heroVisual.addEventListener('mouseleave', () => {
+    tgCard.style.transform = '';
+    heroVisual.querySelectorAll('.float-chip').forEach((chip) => {
+      chip.style.translate = '';
+    });
+  });
+}
+
 // CTA glow parallax
 const ctaGlow = document.querySelector('.cta__glow');
 const ctaSection = document.querySelector('.cta');
