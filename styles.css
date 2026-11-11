@@ -324,7 +324,8 @@ h1 { font-size: 32px; }
 
 .reward {
   border-radius: var(--radius-xl); background: var(--blue-subtle);
-  padding: 8px 12px; text-align: right;
+  padding: 8px 12px; text-align: right; white-space: nowrap;
+  flex-shrink: 0;
 }
 .reward__label { font-size: 10px; font-weight: 500; line-height: 1.2; color: var(--ink-muted); }
 .reward__value { font-size: 15px; font-weight: 700; line-height: 1.2; color: var(--blue); }
