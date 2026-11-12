@@ -654,38 +654,4 @@ h1 { font-size: 32px; }
 }
 .tg-card__btn:active { transform: scale(0.98); }
 
-.float-chip {
-  position: absolute; z-index: 3;
-  display: flex; align-items: center; gap: 7px;
-  padding: 9px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.85);
-  border: 1px solid var(--hairline-strong);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px -12px rgba(15, 27, 51, 0.25);
-  font-size: 12.5px; font-weight: 600; color: var(--ink);
-  white-space: nowrap;
-  will-change: transform;
-}
-.float-chip svg { width: 14px; height: 14px; color: var(--blue); }
-.float-chip--1 {
-  top: 8%; left: -4%;
-  animation: chip-float-1 6s ease-in-out infinite;
-}
-.float-chip--2 {
-  bottom: 10%; right: -6%;
-  animation: chip-float-2 7s ease-in-out infinite;
-}
-@media (max-width: 959px) {
-  .float-chip--1 { left: 0; }
-  .float-chip--2 { right: 0; }
-}
-@keyframes chip-float-1 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-@keyframes chip-float-2 {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(10px); }
-}
+
